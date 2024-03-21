@@ -6,6 +6,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { EstadoComponent } from './components/estado/estado.component';
 import { CiudadComponent } from './components/ciudad/ciudad.component';
 import { PerfilAdminComponent } from './components/perfil-admin/perfil-admin.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent }, // Ruta raíz
@@ -13,7 +14,10 @@ const routes: Routes = [
   { path: 'pais', component: PaisComponent },
   {path: 'ciudad',component: CiudadComponent},
   {path: 'estado',component:EstadoComponent},
-  {path: 'perfil',component: PerfilAdminComponent}
+  {path: 'perfil',component: PerfilAdminComponent},
+  {path: 'register',component: RegisterComponent},
+
+  
 ];
 
 @NgModule({

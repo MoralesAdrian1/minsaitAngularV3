@@ -17,6 +17,7 @@ import { EstadoService } from './services/estado.service';
 import { CiudadService } from './services/ciudad.service';
 import { PerfilAdminComponent } from './components/perfil-admin/perfil-admin.component';
 import { PerfilAdminService } from './services/perfil-admin.service';
+import { UserService } from './services/user.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,9 @@ import { PerfilAdminService } from './services/perfil-admin.service';
     PaisService,
     EstadoService,
     CiudadService,
-    PerfilAdminService
+    PerfilAdminService,
+    UserService
+
   ],
   bootstrap: [AppComponent],
 })
