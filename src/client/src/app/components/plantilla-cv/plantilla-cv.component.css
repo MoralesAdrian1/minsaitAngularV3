@@ -1,0 +1,140 @@
+html
+
+
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px var(--aura);
+    min-width: 420px;
+    max-width: 1000px;
+    width: 90%;
+    padding: 30px;
+    background-color: #f8f9fa; /* Cambia el color de fondo del formulario */
+    color: #333; /* Cambia el color del texto */
+    font-size: 16px;
+}
+
+.my-form h1 {
+    color: #0d003b; /* Cambia el color del título principal */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.my-form h2 {
+    color: #28a745; /* Cambia el color de los subtítulos */
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.my-form h3 {
+    color: #ffffff; /* Cambia el color de los subtítulos */
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.my-form h4 {
+    color: #ffffff; /* Cambia el color de los subtítulos */
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.my-form .form-sections {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-form .section {
+    width: 48%;
+}
+
+.my-form .form-image {
+    width: 100%;
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+
+.my-form .contact-info {
+    margin-bottom: 30px;
+}
+
+.my-form .location-info {
+    display: flex;
+    gap: 10px;
+}
+
+.my-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.my-form input[type="text"],
+.my-form input[type="tel"],
+.my-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.my-form .line {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+
+.my-form .section.left {
+    background-color:  #e1e8f3 ; /* Cambia el color de fondo del lado izquierdo a verde */
+    color: #fff; /* Cambia el color del texto a blanco */
+    padding: 20px; /* Ajusta el espacio interno */
+    width: 40%;
+    -webkit-text-fill-color:  #0d003b;
+}
+
+.my-form .section.right  {
+    background-color: #ffffff; /* Cambia el color de fondo del lado derecho a gris */
+    color: #d4d4d4; /* Cambia el color del texto a negro */
+    padding: 20px; /* Ajusta el espacio interno */
+    width: 60%;
+    -webkit-text-fill-color:  #000000;
+}
+
+/* Estilos para el texto dentro de la sección izquierda */
+.my-form .section.left p {
+    font-size: 16px; /* Cambia el tamaño del texto a 16px */
+}
+
+/* Estilos para el texto dentro de la sección derecha */
+.my-form .section.right p {
+    font-size: 16px; /* Cambia el tamaño del texto a 16px */
+}
+
+.my-form .top-section {
+    background-color:  #c0ccda ; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Borde redondeado */
+    margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+.my-form .form-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px; /* Ajusta el margen superior para compensar */
+}

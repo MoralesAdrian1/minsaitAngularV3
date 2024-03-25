@@ -7,7 +7,7 @@ import { EstadoComponent } from './components/estado/estado.component';
 import { CiudadComponent } from './components/ciudad/ciudad.component';
 import { PerfilAdminComponent } from './components/perfil-admin/perfil-admin.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import { PlantillaCvComponent } from './components/plantilla-cv/plantilla-cv.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent }, // Ruta raíz
   { path: 'datosP', component: DatosPComponent },
@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'estado',component:EstadoComponent},
   {path: 'perfil',component: PerfilAdminComponent},
   {path: 'register',component: RegisterComponent},
+  {path: 'cv',component: PlantillaCvComponent},
 
   
 ];

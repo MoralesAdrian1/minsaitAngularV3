@@ -19,6 +19,7 @@ import { PerfilAdminComponent } from './components/perfil-admin/perfil-admin.com
 import { PerfilAdminService } from './services/perfil-admin.service';
 import { UserService } from './services/user.service';
 import { PlantillaCvComponent } from './components/plantilla-cv/plantilla-cv.component';
+import { PlantillaCvService } from './services/plantilla-cv.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +45,8 @@ import { PlantillaCvComponent } from './components/plantilla-cv/plantilla-cv.com
     EstadoService,
     CiudadService,
     PerfilAdminService,
-    UserService
-
+    UserService,
+    PlantillaCvService
   ],
   bootstrap: [AppComponent],
 })

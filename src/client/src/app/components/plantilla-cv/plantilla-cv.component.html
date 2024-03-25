@@ -1,1 +1,53 @@
-<p>plantilla-cv works!</p>
+<div class="centering">
+    <form class="my-form">
+        <h1>Curriculum Vitae</h1>
+        
+        <div class="top-section">
+
+
+            <div class="contact-info">
+                <h1>Nombre Completo</h1>
+            </div>
+            <!-- Contenido de la nueva sección -->
+        </div>
+
+        <div class="form-sections">
+
+
+
+
+            <div class="section left">
+                <img class="form-image" src="/assets/descarga.png" alt="Imagen del CV">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+<!--                 <p><strong>Nombre:</strong> {{ datosP.nombrePais }}</p>-->
+                    <p><strong>Teléfono:</strong> {{ datosP.telefono }}</p>
+                    <p><strong>País:</strong> {{ datosP.nombrePais }}</p>
+                    <p><strong>Estado:</strong> {{ datosP.nombreEstado }}</p>
+                    <p><strong>Ciudad:</strong> {{ datosP.nombreCiudad }}</p>
+                </div>
+                <div class="line"></div>
+                <h3>Idiomas</h3>
+                <p>{{ perfil.idiomas }}</p>
+            </div>
+
+            <div class="section right">
+                <h2>Perfil Profesional</h2>
+                <div class="line"></div>
+                <p><strong>Puesto:</strong> {{ perfil.puesto }}</p>
+                <p><strong>Lenguajes de Programación:</strong> {{ perfil.habilidades.join(', ') }}</p>
+                <p><strong>Sistemas Operativos:</strong> {{ perfil.Sos.join(', ') }}</p>
+                <p><strong>Experiencia:</strong> {{ perfil.experiencia }} años</p>
+                <p><strong>Certificaciones:</strong> {{ perfil.certificaciones.join(', ') }}</p>
+                <div class="line"></div>
+                <h2>Estudios</h2>
+                <div class="line"></div>
+                <h2>Experiencia</h2>
+            </div>
+        </div>
+    </form>
+</div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
