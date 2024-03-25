@@ -61,7 +61,7 @@ router.post('/user', (req, res, next) => {
 
 router.put('/user/:id', (req, res, next) => {
     const UserID = req.params.id;
-    const {username, email,password, } = req.body;
+    const {username, email,password,status } = req.body;
 
     if (!ObjectId.isValid(UserID)) {
         return res.status(400).json({ error: 'Invalid datosP ID' });
@@ -72,7 +72,8 @@ router.put('/user/:id', (req, res, next) => {
         $set: {
             username,
             email,
-            password
+            password,
+            status
         }
     };
 

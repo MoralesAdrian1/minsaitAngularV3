@@ -3,6 +3,7 @@ export class userModel {
     username:string="";
     email:string="";
     password:string="";
+    status="";
     isDone: boolean = false; // Valor predeterminado // Valor predeterminado
     n?:number;
 
