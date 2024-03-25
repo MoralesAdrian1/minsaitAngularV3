@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { userModel } from 'src/app/models/userModel';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
   user: userModel[] = [];
   userForm: FormGroup;
 
-  constructor(private userService: UserService, private fb: FormBuilder) {
+  constructor(private userService: UserService, private fb: FormBuilder, private router: Router) {
     this.userForm = this.fb.group({
       _id: [''],
       username: ["", Validators.required],
@@ -43,6 +44,8 @@ export class RegisterComponent implements OnInit {
         () => {
           this.cargarUser();
           this.userForm.reset();
+          // Redireccionar al componente deseado después del registro
+          this.router.navigate(['/datosP']);
         },
         error => {
           console.error('Error al agregar user:', error);
