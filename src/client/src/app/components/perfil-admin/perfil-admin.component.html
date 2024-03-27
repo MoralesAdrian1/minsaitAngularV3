@@ -15,8 +15,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="habilidades" class="text-dart">Lenguajes de Programación</label>
-                    <input type="text" class="form-control" id="habilidades" name="habilidades" formControlName="habilidades" required>
+                    <label for="lenguajeProgramacion" class="text-dart">Lenguajes de Programación</label>
+                    <input type="text" class="form-control" id="lenguajeProgramacion" name="lenguajeProgramacion" formControlName="lenguajeProgramacion" required>
                 </div>
 
                 <div class="form-group">
@@ -24,8 +24,8 @@
                     <input type="text" class="form-control" id="Sos" name="Sos" formControlName="Sos" required>
                 </div>
                 <div class="form-group">
-                    <label for="experiencia" class="text-dart">Años de Experiencia</label>
-                    <input type="number" class="form-control" id="experiencia" name="experiencia" formControlName="experiencia" required>
+                    <label for="yearsExperiencia" class="text-dart">Años de Experiencia</label>
+                    <input type="number" class="form-control" id="yearsExperiencia" name="yearsExperiencia" formControlName="yearsExperiencia" required>
                 </div>
                 <div class="form-group">
                     <label for="idiomas" class="text-dart">Idiomas</label>
@@ -66,9 +66,9 @@
         <tbody id="datosP-table-body">
             <tr *ngFor="let item of perfil">
                 <td>{{ item.puesto }}</td>
-                <td>{{ item.habilidades }}</td>
+                <td>{{ item.lenguajeProgramacion }}</td>
                 <td>{{ item.Sos }}</td>
-                <td>{{ item.experiencia }} Años</td>
+                <td>{{ item.yearsExperiencia }} Años</td>
                 <td>{{ item.idiomas }}</td>
                 <td>{{ item.certificaciones }} </td>
                 <td>

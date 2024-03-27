@@ -62,7 +62,7 @@ router.post('/datosP', (req, res, next) => {
 
 router.put('/datosP/:id', (req, res, next) => {
     const datosPId = req.params.id;
-    const { telefono,dateNac, sexo, cp, nombrePais, nombreEstado, nombreCiudad} = req.body;
+    const { username,telefono,dateNac, sexo, cp, nombrePais, nombreEstado, nombreCiudad} = req.body;
 
     // Check if vehiculoId is a valid ObjectId
     if (!ObjectId.isValid(datosPId)) {
@@ -72,6 +72,7 @@ router.put('/datosP/:id', (req, res, next) => {
     const query = { _id: ObjectId(datosPId) };
     const update = {
         $set: {
+            username,
             telefono,
             dateNac, 
             sexo, 

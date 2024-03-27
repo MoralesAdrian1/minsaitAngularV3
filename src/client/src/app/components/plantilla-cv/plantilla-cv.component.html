@@ -6,7 +6,7 @@
 
 
             <div class="contact-info">
-                <h1>Nombre Completo</h1>
+                <h1>{{ datosP.username }}</h1>
             </div>
             <!-- Contenido de la nueva sección -->
         </div>
@@ -35,9 +35,9 @@
                 <h2>Perfil Profesional</h2>
                 <div class="line"></div>
                 <p><strong>Puesto:</strong> {{ perfil.puesto }}</p>
-                <p><strong>Lenguajes de Programación:</strong> {{ perfil.habilidades.join(', ') }}</p>
+                <p><strong>Lenguajes de Programación:</strong> {{ perfil.lenguajeProgramacion.join(', ') }}</p>
                 <p><strong>Sistemas Operativos:</strong> {{ perfil.Sos.join(', ') }}</p>
-                <p><strong>Experiencia:</strong> {{ perfil.experiencia }} años</p>
+                <p><strong>Experiencia:</strong> {{ perfil.yearsExperiencia }} años</p>
                 <p><strong>Certificaciones:</strong> {{ perfil.certificaciones.join(', ') }}</p>
                 <div class="line"></div>
                 <h2>Estudios</h2>
@@ -48,6 +48,7 @@
     </form>
 </div>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">

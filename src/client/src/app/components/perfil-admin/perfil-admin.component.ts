@@ -16,9 +16,9 @@ export class PerfilAdminComponent implements OnInit {
     this.perfilForm = this.fb.group({
       _id: [''],
       puesto: ["", Validators.required],
-      habilidades: [[], Validators.required], // Cambio para recibir un array
+      lenguajeProgramacion: [[], Validators.required], // Cambio para recibir un array
       Sos: [[], Validators.required], // Cambio para recibir un array
-      experiencia: [0, Validators.required],
+      yearsExperiencia: [0, Validators.required],
       idiomas: [[], Validators.required], // Cambio para recibir un array
       certificaciones: [[]], // Cambio para recibir un array vacío
     });
@@ -42,7 +42,7 @@ export class PerfilAdminComponent implements OnInit {
   agregarPerfil() {
     if (this.perfilForm.valid) {
         // Dividir los valores de habilidades, Sos, idiomas y certificaciones por comas
-        const habilidades = this.perfilForm.value.habilidades.split(',');
+        const lenguajeProgramacion = this.perfilForm.value.lenguajeProgramacion.split(',');
         const Sos = this.perfilForm.value.Sos.split(',');
         const idiomas = this.perfilForm.value.idiomas.split(',');
         const certificaciones = this.perfilForm.value.certificaciones.split(',');
@@ -50,7 +50,7 @@ export class PerfilAdminComponent implements OnInit {
         // Construir un nuevo objeto con los datos actualizados
         const nuevoPerfil = {
             ...this.perfilForm.value,
-            habilidades,
+            lenguajeProgramacion,
             Sos,
             idiomas,
             certificaciones

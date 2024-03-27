@@ -41,6 +41,7 @@ export class DatosPComponent implements OnInit {
   ) {
     this.datosPForm = this.fb.group({
       _id: [''],
+      username: ['', Validators.required],
       telefono: [0, Validators.required],
       dateNac: [0, Validators.required],
       sexo: ['', Validators.required],

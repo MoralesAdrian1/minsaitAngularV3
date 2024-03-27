@@ -1,5 +1,6 @@
 export class DatosPModel {
     _id?: string;
+    username:String="";
     telefono: number = 0;
     dateNac:Date;
     sexo: string="";

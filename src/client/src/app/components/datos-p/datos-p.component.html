@@ -9,6 +9,10 @@
 
           <form [formGroup]="datosPForm">
               <fieldset>
+                <div class="form-group">
+                  <label for="username" class="text-dart">username</label>
+                  <input type="text" class="form-control" id="username" name="username" formControlName="username" required>
+                </div>
             <div class="form-group">
               <label for="telefono" class="text-dart">Telefono</label>
               <input type="text" class="form-control" id="telefono" name="telefono" formControlName="telefono" required>
@@ -74,6 +78,7 @@
       <table class="table table-striped table-hover " >
         <thead>
           <tr class="table-primary">
+            <th scope="col">username</th>
             <th scope="col">Teléfono</th>
             <th scope="col">Fecha de Nacimiento</th>
             <th scope="col">Sexo</th>
@@ -87,6 +92,7 @@
         </thead>
         <tbody id="datosP-table-body">
           <tr *ngFor="let datos of datosP">
+            <td>{{ datos.username }}</td>
             <td>{{ datos.telefono }}</td>
             <td>{{ datos.dateNac }}</td>
             <td>{{ datos.sexo }}</td>

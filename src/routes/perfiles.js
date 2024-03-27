@@ -63,9 +63,9 @@ router.post('/perfil', (req, res, next) => {
 router.put('/perfil/:id', (req, res, next) => {
     const PerfilID = req.params.id;
     const {puesto,
-            habilidades,
+            lenguajeProgramacion,
             Sos,
-            experiencia,
+            yearsExperiencia,
             idiomas,
             certiicaciones}
              = req.body;
@@ -79,9 +79,9 @@ router.put('/perfil/:id', (req, res, next) => {
     const update = {
         $set: {
             puesto,
-            habilidades,
+            lenguajeProgramacion,
             Sos,
-            experiencia,
+            yearsExperiencia,
             idiomas,
             certiicaciones
         }
