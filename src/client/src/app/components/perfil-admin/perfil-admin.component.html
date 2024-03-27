@@ -16,24 +16,33 @@
 
                 <div class="form-group">
                     <label for="lenguajeProgramacion" class="text-dart">Lenguajes de Programación</label>
-                    <input type="text" class="form-control" id="lenguajeProgramacion" name="lenguajeProgramacion" formControlName="lenguajeProgramacion" required>
+                    <select multiple class="form-control" id="lenguajeProgramacion" name="lenguajeProgramacion" formControlName="lenguajeProgramacion" required>
+                        <option *ngFor="let lang of lenguajesProgramacionDisponibles" [ngValue]="lang">{{ lang }}</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="Sos" class="text-dart">Sistemas Operativos</label>
-                    <input type="text" class="form-control" id="Sos" name="Sos" formControlName="Sos" required>
+                    <select multiple class="form-control" id="Sos" name="Sos" formControlName="Sos" required>
+                        <option *ngFor="let so of sistemasOperativosDisponibles" [ngValue]="so">{{ so }}</option>
+                    </select>
                 </div>
+                
                 <div class="form-group">
                     <label for="yearsExperiencia" class="text-dart">Años de Experiencia</label>
                     <input type="number" class="form-control" id="yearsExperiencia" name="yearsExperiencia" formControlName="yearsExperiencia" required>
                 </div>
                 <div class="form-group">
                     <label for="idiomas" class="text-dart">Idiomas</label>
-                    <input type="text" class="form-control" id="idiomas" name="idiomas" formControlName="idiomas" required>
+                    <select multiple class="form-control" id="idiomas" name="idiomas" formControlName="idiomas" required>
+                        <option *ngFor="let idioma of idiomasDisponibles" [ngValue]="idioma">{{ idioma }}</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="certificaciones" class="text-dart">Certificaciones</label>
-                    <input type="text" class="form-control" id="certificaciones" name="certificaciones" formControlName="certificaciones" required>
+                    <select multiple class="form-control" id="certificaciones" name="certificaciones" formControlName="certificaciones" required>
+                        <option *ngFor="let certificacion of certificacionesDisponibles" [ngValue]="certificacion">{{ certificacion }}</option>
+                    </select>
                 </div>
             
                 <div class="btn-group mt-2">
