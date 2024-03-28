@@ -20,6 +20,7 @@ import { PerfilAdminService } from './services/perfil-admin.service';
 import { UserService } from './services/user.service';
 import { PlantillaCvComponent } from './components/plantilla-cv/plantilla-cv.component';
 import { PlantillaCvService } from './services/plantilla-cv.service';
+import { DatosEstudiosComponent } from './components/datos-estudios/datos-estudios.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { PlantillaCvService } from './services/plantilla-cv.service';
     CiudadComponent,
     PerfilAdminComponent,
     PlantillaCvComponent,
+    DatosEstudiosComponent,
   ],
   imports: [
     BrowserModule,

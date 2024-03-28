@@ -11,6 +11,7 @@ const ciudadRoutes = require('./routes/ciudad');
 const perfilesRoutes = require('./routes/perfiles');
 const userRoutes = require('./routes/user');
 const loginRoutes = require('./routes/login');
+const datosEstudiosRoutes = require('./routes/datosEstudios');
 
 //settings
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +34,7 @@ app.use('/api', ciudadRoutes);
 app.use('/api', perfilesRoutes);
 app.use('/api', userRoutes);
 app.use('/api', loginRoutes);
-
+app.use('/api', datosEstudiosRoutes);
 //static file
 app.use(express.static(path.join(__dirname, 'dist')));
 
