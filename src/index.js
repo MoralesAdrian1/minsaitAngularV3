@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
+//routes admin
 const datosPRoutes = require('./routes/datosP');
 const paisRoutes = require('./routes/pais');
 const path = require('path');
@@ -9,9 +10,12 @@ const lugarRoutes = require('./routes/lugar');
 const estadoRoutes = require('./routes/estado');
 const ciudadRoutes = require('./routes/ciudad');
 const perfilesRoutes = require('./routes/perfiles');
+//routes user
 const userRoutes = require('./routes/user');
 const loginRoutes = require('./routes/login');
 const datosEstudiosRoutes = require('./routes/datosEstudios');
+const datosLaboralesRoutes = require('./routes/datosLaborales');
+
 
 //settings
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +39,7 @@ app.use('/api', perfilesRoutes);
 app.use('/api', userRoutes);
 app.use('/api', loginRoutes);
 app.use('/api', datosEstudiosRoutes);
+app.use('/api',datosLaboralesRoutes);
 //static file
 app.use(express.static(path.join(__dirname, 'dist')));
 
