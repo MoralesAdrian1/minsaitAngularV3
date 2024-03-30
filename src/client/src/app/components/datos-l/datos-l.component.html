@@ -48,7 +48,9 @@
                                     <option *ngFor="let idioma of idiomasDisponibles" [value]="idioma">{{ idioma }}</option>
                                 </select>
                                 <Label class="text-dart">Nivel Del Idioma</Label>
-                                <input type="text" class="form-control" formControlName="nivel" required />
+                                <select class="form-control" formControlName="nivel" required>
+                                    <option *ngFor="let nivel of nivelIdiomasDisponibles" [value]="nivel">{{ nivel }}</option>
+                                </select>
                             </div>
                         </div>
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PerfilModel } from 'src/app/models/perfilModel';
 import { PerfilAdminService } from 'src/app/services/perfil-admin.service';
 
@@ -13,8 +13,9 @@ export class PerfilAdminComponent implements OnInit {
     perfilForm: FormGroup;
 
     lenguajesProgramacionDisponibles: string[] = ["JavaScript", "Java", "Python", "JSX", "Kotlin"];
-    sistemasOperativosDisponibles: string[] = ["Windows", "Linux", "MacOS"];
+    TecnologiasDisponibles: string[] = ["Angular", "SpringBoot 5", "React"];
     idiomasDisponibles: string[] = ["Inglés", "Español", "Francés"];
+    nivelIdiomasDisponibles: string[] = ["A2", "B1", "B2","C1", "C2"];
     certificacionesDisponibles: string[] = ["Certificación 1", "Certificación 2", "Certificación 3"];
 
     constructor(private perfilService: PerfilAdminService, private fb: FormBuilder) {
@@ -22,9 +23,9 @@ export class PerfilAdminComponent implements OnInit {
             _id: [''],
             puesto: ["", Validators.required],
             lenguajeProgramacion: [[]],
-            Sos: [[]],
+            tecnologia: [[]],
             yearsExperiencia: [0, Validators.required],
-            idiomas: [[]],
+            idiomas: this.fb.array([]),
             certificaciones: [[]],
         });
     }
@@ -96,5 +97,18 @@ export class PerfilAdminComponent implements OnInit {
 
     editarPerfil(perfil: PerfilModel) {
         this.perfilForm.patchValue(perfil);
+    }
+    //idiomas
+  agregarIdioma() {
+    const idiomaGroup = this.fb.group({
+      nombreIdioma: ['', Validators.required],
+      nivel:['', Validators.required], 
+    });
+    this.idiomas.push(idiomaGroup);
+  }
+  
+  
+    get idiomas() {
+      return this.perfilForm.get('idiomas') as FormArray;
     }
 }

@@ -22,9 +22,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="Sos" class="text-dart">Sistemas Operativos</label>
-                    <select multiple class="form-control" id="Sos" name="Sos" formControlName="Sos" required>
-                        <option *ngFor="let so of sistemasOperativosDisponibles" [ngValue]="so">{{ so }}</option>
+                    <label for="tecnologia" class="text-dart">Tecnologias</label>
+                    <select multiple class="form-control" id="tecnologia" name="tecnologia" formControlName="tecnologia" required>
+                        <option *ngFor="let so of TecnologiasDisponibles" [ngValue]="so">{{ so }}</option>
                     </select>
                 </div>
                 
@@ -32,12 +32,23 @@
                     <label for="yearsExperiencia" class="text-dart">Años de Experiencia</label>
                     <input type="number" class="form-control" id="yearsExperiencia" name="yearsExperiencia" formControlName="yearsExperiencia" required>
                 </div>
-                <div class="form-group">
-                    <label for="idiomas" class="text-dart">Idiomas</label>
-                    <select multiple class="form-control" id="idiomas" name="idiomas" formControlName="idiomas" required>
-                        <option *ngFor="let idioma of idiomasDisponibles" [ngValue]="idioma">{{ idioma }}</option>
-                    </select>
+                <div formArrayName="idiomas">
+                    <div *ngFor="let idiomaGroup of idiomas.controls; let i = index" class="form-group"
+                        [formGroupName]="i">
+                        <label class="text-dart">Idioma {{ i + 1 }}</label>
+                        <select class="form-control" formControlName="nombreIdioma" required>
+                            <option *ngFor="let idioma of idiomasDisponibles" [value]="idioma">{{ idioma }}</option>
+                        </select>
+                        <Label class="text-dart">Nivel Del Idioma</Label>
+                        <select class="form-control" formControlName="nivel" required>
+                            <option *ngFor="let nivel of nivelIdiomasDisponibles" [value]="nivel">{{ nivel }}</option>
+                        </select>
+                    </div>
                 </div>
+                <button type="button" class="btn btn-primary" (click)="agregarIdioma()">
+                    Agregar Idioma
+                </button>
+                <p></p>
                 <div class="form-group">
                     <label for="certificaciones" class="text-dart">Certificaciones</label>
                     <select multiple class="form-control" id="certificaciones" name="certificaciones" formControlName="certificaciones" required>
@@ -65,7 +76,7 @@
             <tr class="table-primary">
                 <th scope="col">Puesto Solicitado</th>
                 <th scope="col">Lenguajes de Programación</th>
-                <th scope="col">Sistemas Operativos</th>
+                <th scope="col">Tecnologias</th>
                 <th scope="col">Experiencia</th>
                 <th scope="col">Idiomas</th>
                 <th scope="col">Certificaciones</th>
@@ -76,9 +87,15 @@
             <tr *ngFor="let item of perfil">
                 <td>{{ item.puesto }}</td>
                 <td>{{ item.lenguajeProgramacion }}</td>
-                <td>{{ item.Sos }}</td>
+                <td>{{ item.tecnologia }}</td>
                 <td>{{ item.yearsExperiencia }} Años</td>
-                <td>{{ item.idiomas }}</td>
+                <td>
+                    <ul>
+                        <li *ngFor="let idioma of item.idiomas">
+                            {{ idioma.nombreIdioma }} ({{ idioma.nivel }})
+                        </li>
+                    </ul>
+                </td>
                 <td>{{ item.certificaciones }} </td>
                 <td>
                     <button class="btn btn-sm ms-2 btn-primary" (click)="editarPerfil(item)"><i class="fa fa-edit"></i></button>

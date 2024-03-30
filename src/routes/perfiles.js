@@ -64,7 +64,7 @@ router.put('/perfil/:id', (req, res, next) => {
     const PerfilID = req.params.id;
     const {puesto,
             lenguajeProgramacion,
-            Sos,
+            tecnologia,
             yearsExperiencia,
             idiomas,
             certiicaciones}
@@ -80,7 +80,7 @@ router.put('/perfil/:id', (req, res, next) => {
         $set: {
             puesto,
             lenguajeProgramacion,
-            Sos,
+            tecnologia,
             yearsExperiencia,
             idiomas,
             certiicaciones

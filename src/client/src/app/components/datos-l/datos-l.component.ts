@@ -15,6 +15,7 @@ export class DatosLComponent implements OnInit{
   lenguajesProgramacionDisponibles: string[] = ["JavaScript", "Java", "Python", "JSX", "Kotlin"];
   tecnologiasDisponibles: string[] = ["Angular", "SpringBoot 5", "React"];
   idiomasDisponibles: string[] = ["Inglés", "Francés"];
+  nivelIdiomasDisponibles: string[] = ["A2", "B1", "B2","C1", "C2"];
 
   constructor(private datosLService: DatosLService, private fb: FormBuilder) {
     this.datosLForm = this.fb.group({
