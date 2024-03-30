@@ -62,7 +62,7 @@ router.post('/datosEs', (req, res, next) => {
 router.put('/datosEs/:id', (req, res, next) => {
     const datosEsID = req.params.id;
     const {username,
-           nombreUniversidad,
+           nombreUniv,
            titulo,
            fechaInicion,
            fechaFin        
@@ -78,7 +78,7 @@ router.put('/datosEs/:id', (req, res, next) => {
     const update = {
         $set: {
             username,
-            nombreUniversidad,
+            nombreUniv,
             titulo,
             fechaInicion,
             fechaFin 

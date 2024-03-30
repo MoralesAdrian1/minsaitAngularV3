@@ -1,14 +1,7 @@
-export class DatosEstudioModel {
+export interface DatosEstudioModel {
     _id?: string;
-    username: string = "";
-    datosAcedemicos: { nombreUniv: string, titulo: string, fechaInicio:Date, fechaFin:Date }[] = []; // Hacer 'archivo' opcional
-    isDone: boolean = false;
+    username:String;
+    datosAcademicos: { nombreUniv: string, titulo: string, fechaInicio: String, fechaFin:String }[];
+    isDone: boolean;
     n?: number;
-    fechaInicio: Date;
-    fechaFin: Date;
-
-    constructor(){
-        this.fechaInicio=new Date();
-        this.fechaFin=new Date();
-    }
-}
+  }

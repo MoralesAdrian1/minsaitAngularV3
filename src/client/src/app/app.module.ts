@@ -25,6 +25,7 @@ import { DatosLComponent } from './components/datos-l/datos-l.component';
 import { DatosLService } from './services/datos-l.service';
 import { DatosExperienciaComponent } from './components/datos-experiencia/datos-experiencia.component';
 import { DatosExperienciaService } from './services/datos-experiencia.service';
+import { DatosEstudiosService } from './services/datos-estudios.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { DatosExperienciaService } from './services/datos-experiencia.service';
     UserService,
     PlantillaCvService,
     DatosLService,
-    DatosExperienciaService
+    DatosExperienciaService,
+    DatosEstudiosService
   ],
   bootstrap: [AppComponent],
 })

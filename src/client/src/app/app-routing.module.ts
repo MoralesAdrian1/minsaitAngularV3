@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PlantillaCvComponent } from './components/plantilla-cv/plantilla-cv.component';
 import { DatosLComponent } from './components/datos-l/datos-l.component';
 import { DatosExperienciaComponent } from './components/datos-experiencia/datos-experiencia.component';
+import { DatosEstudiosComponent } from './components/datos-estudios/datos-estudios.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent }, // Ruta raíz
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'cv',component: PlantillaCvComponent},
   {path:'datosL',component:DatosLComponent},
  {path: 'datosEx',component:DatosExperienciaComponent},
+ {path: 'datosEs',component:DatosEstudiosComponent},
 
   
 ];
