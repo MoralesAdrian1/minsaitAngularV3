@@ -17,6 +17,7 @@ export class PerfilAdminComponent implements OnInit {
     idiomasDisponibles: string[] = ["Inglés", "Español", "Francés"];
     nivelIdiomasDisponibles: string[] = ["A2", "B1", "B2","C1", "C2"];
     certificacionesDisponibles: string[] = ["Certificación 1", "Certificación 2", "Certificación 3"];
+i: any;
 
     constructor(private perfilService: PerfilAdminService, private fb: FormBuilder) {
         this.perfilForm = this.fb.group({

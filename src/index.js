@@ -15,6 +15,7 @@ const userRoutes = require('./routes/user');
 const loginRoutes = require('./routes/login');
 const datosEstudiosRoutes = require('./routes/datosEstudios');
 const datosLaboralesRoutes = require('./routes/datosLaborales');
+const datosExperienciaRoutes = require('./routes/datosExperiencia');
 
 
 //settings
@@ -40,6 +41,7 @@ app.use('/api', userRoutes);
 app.use('/api', loginRoutes);
 app.use('/api', datosEstudiosRoutes);
 app.use('/api',datosLaboralesRoutes);
+app.use('/api',datosExperienciaRoutes);
 //static file
 app.use(express.static(path.join(__dirname, 'dist')));
 

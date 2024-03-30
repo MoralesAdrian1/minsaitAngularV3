@@ -20,6 +20,7 @@ export class DatosLComponent implements OnInit{
   constructor(private datosLService: DatosLService, private fb: FormBuilder) {
     this.datosLForm = this.fb.group({
       _id: [''],
+      username: ["", Validators.required],
       puestoPostulante: ["", Validators.required],
       lenguajeProgramacion: [[]],
       tecnologias: [[]],

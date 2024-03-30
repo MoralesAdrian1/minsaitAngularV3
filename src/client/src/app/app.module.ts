@@ -23,6 +23,8 @@ import { PlantillaCvService } from './services/plantilla-cv.service';
 import { DatosEstudiosComponent } from './components/datos-estudios/datos-estudios.component';
 import { DatosLComponent } from './components/datos-l/datos-l.component';
 import { DatosLService } from './services/datos-l.service';
+import { DatosExperienciaComponent } from './components/datos-experiencia/datos-experiencia.component';
+import { DatosExperienciaService } from './services/datos-experiencia.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import { DatosLService } from './services/datos-l.service';
     PlantillaCvComponent,
     DatosEstudiosComponent,
     DatosLComponent,
+    DatosExperienciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { DatosLService } from './services/datos-l.service';
     PerfilAdminService,
     UserService,
     PlantillaCvService,
-    DatosLService
+    DatosLService,
+    DatosExperienciaService
   ],
   bootstrap: [AppComponent],
 })

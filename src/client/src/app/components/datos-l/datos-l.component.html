@@ -9,6 +9,11 @@
 
                     <form [formGroup]="datosLForm" (ngSubmit)="agregarDatosL()">
                         <div class="form-group">
+                            <label for="username" class="text-dart">Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                formControlName="username" required />
+                        </div>
+                        <div class="form-group">
                             <label for="puestoPostulante" class="text-dart">Solicitado</label>
                             <input type="text" class="form-control" id="puestoPostulante" name="puestoPostulante"
                                 formControlName="puestoPostulante" required />
@@ -89,6 +94,7 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr class="table-primary">
+                        <th scope="col">Nombre de Usuario</th>
                         <th scope="col">Puesto Solicitado</th>
                         <th scope="col">Lenguajes de Programación</th>
                         <th scope="col">Tecnologias</th>
@@ -100,6 +106,7 @@
                 </thead>
                 <tbody id="datosP-table-body">
                     <tr *ngFor="let item of datosL">
+                        <td>{{ item.username }}</td>
                         <td>{{ item.puestoPostulante }}</td>
                         <td>{{ item.lenguajeProgramacion.join(", ") }}</td>
                         <td>{{ item.tecnologias.join(", ") }}</td>

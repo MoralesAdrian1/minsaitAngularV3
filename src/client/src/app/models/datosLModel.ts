@@ -1,5 +1,6 @@
 export interface DatosLModel {
     _id?: string;
+    username:String;
     puestoPostulante: string;
     lenguajeProgramacion: string[];
     tecnologias: string[];
