@@ -65,7 +65,7 @@
             
             <div class="btn-group mt-2" >
               <button type="button" class="btn btn-primary" (click)="agregarDatosP()">Agregar</button>
-              <button type="button" class="btn btn-success ms-2" (click)="actualizarDatosP()">Actualizar</button>
+              <button type="button" class="btn btn-success ms-2" routerLink="/cv" (click)="actualizarDatosP()">Actualizar</button>
             </div>
           </form>
           
@@ -101,7 +101,7 @@
             <td>{{ datos.nombreEstado }}</td>
             <td>{{ datos.nombreCiudad }}</td>
             <td>
-              <button class="btn btn-sm ms-2 btn-primary" (click)="editarDatosP(datos)"><i class="fa fa-edit"></i></button>
+              <button class="btn btn-sm ms-2 btn-primary" (click)="editarDatosP(datos)" ><i class="fa fa-edit"></i></button>
             </td>
             <td>
               <button type="button" class="btn btn-danger btn-sm ms-2" (click)="eliminarDatosP(datos._id)"><i class="fa fa-trash"></i></button>

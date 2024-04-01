@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosPModel } from 'src/app/models/datosPModel';
-import { DatosCvModel, PerfilCvModel } from 'src/app/models/plantillaCvModel';
+import { DatosCvModel, DatosEsCvModel, DatosExCVModel, PerfilCvModel } from 'src/app/models/plantillaCvModel';
 import { PlantillaCvService } from 'src/app/services/plantilla-cv.service';
 
 
@@ -13,6 +13,8 @@ export class PlantillaCvComponent implements OnInit {
 
   datosP: DatosCvModel = {} as DatosCvModel;
   perfil: PerfilCvModel = {} as PerfilCvModel;
+  datosEs: DatosEsCvModel ={ } as DatosEsCvModel;
+  datosEx: DatosExCVModel = {} as DatosExCVModel;
 
   constructor(private plantillaCvService: PlantillaCvService) { }
 
@@ -21,6 +23,7 @@ export class PlantillaCvComponent implements OnInit {
   }
 
   obtenerDatos() {
+    //datos Personales
     this.plantillaCvService.getDatosP().subscribe(
       (data: DatosCvModel[]) => {
         this.datosP = data[0]; // Obtener el primer elemento del array
@@ -29,7 +32,7 @@ export class PlantillaCvComponent implements OnInit {
         console.error('Error al obtener datosP:', error);
       }
     );
-
+      //datos del Perfil laboral
     this.plantillaCvService.getPerfil().subscribe(
       (data: PerfilCvModel[]) => {
         this.perfil = data[0]; // Obtener el primer elemento del array
@@ -37,6 +40,25 @@ export class PlantillaCvComponent implements OnInit {
       error => {
         console.error('Error al obtener perfil:', error);
       }
+    );
+//datos de estudio
+this.plantillaCvService.getDatosEs().subscribe(
+  (data: DatosEsCvModel[]) => {
+    this.datosEs = data[0]; // Obtener el primer elemento del array
+  },
+  error => {
+    console.error('Error al obtener DatosEs:', error);
+  }
+    );
+
+//datos de Experiencia
+this.plantillaCvService.getDatosEx().subscribe(
+  (data: DatosExCVModel[]) => {
+    this.datosEx = data[0]; // Obtener el primer elemento del array
+  },
+  error => {
+    console.error('Error al obtener DatosEs:', error);
+  }
     );
   }
 }

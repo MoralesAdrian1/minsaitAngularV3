@@ -3,19 +3,12 @@
         <h1>Curriculum Vitae</h1>
         
         <div class="top-section">
-
-
             <div class="contact-info">
                 <h1>{{ datosP.username }}</h1>
             </div>
             <!-- Contenido de la nueva sección -->
         </div>
-
         <div class="form-sections">
-
-
-
-
             <div class="section left">
                 <img class="form-image" src="/assets/descarga.png" alt="Imagen del CV">
                 <div class="contact-info">
@@ -25,24 +18,61 @@
                     <p><strong>País:</strong> {{ datosP.nombrePais }}</p>
                     <p><strong>Estado:</strong> {{ datosP.nombreEstado }}</p>
                     <p><strong>Ciudad:</strong> {{ datosP.nombreCiudad }}</p>
+                    <p><strong>Código Postal:</strong> {{ datosP.cp }}</p>
+                    <a class="button" href="/datosP"> Editar Datos</a>
                 </div>
                 <div class="line"></div>
                 <h3>Idiomas</h3>
-                <p>{{ perfil.idiomas }}</p>
+                <p><li *ngFor="let idioma of perfil.idiomas">
+                    {{ idioma.nombreIdioma }} ({{ idioma.nivel }})
+                </li></p>
+                <a class="button" href="/datosP"> Editar Datos</a>
             </div>
 
             <div class="section right">
                 <h2>Perfil Profesional</h2>
                 <div class="line"></div>
-                <p><strong>Puesto:</strong> {{ perfil.puesto }}</p>
+                <p><strong>Puesto Solictado:</strong> {{ perfil.puestoPostulante }}</p>
                 <p><strong>Lenguajes de Programación:</strong> {{ perfil.lenguajeProgramacion.join(', ') }}</p>
-                <p><strong>Sistemas Operativos:</strong> {{ perfil.Sos.join(', ') }}</p>
+                <p><strong>Sistemas Operativos:</strong> {{ perfil.tecnologias.join(', ') }}</p>
                 <p><strong>Experiencia:</strong> {{ perfil.yearsExperiencia }} años</p>
-                <p><strong>Certificaciones:</strong> {{ perfil.certificaciones.join(', ') }}</p>
+                <p><strong>Certificaciones:</strong>  <li *ngFor="let certificacion of perfil.certificaciones">
+                    {{ certificacion.nombre }}
+                    <span *ngIf="certificacion.archivo">- Archivo Adjunto</span>
+                </li></p>
+                <a class="button" href="/datosL"> Editar Datos</a>
+                
                 <div class="line"></div>
                 <h2>Estudios</h2>
+                <p>
+                    <li *ngFor="let datosAcademicos of datosEs.datosAcademicos">
+                        <strong> Nombre Universidad:</strong>{{ datosAcademicos.nombreUniv }} 
+                        <br>
+                        <strong>Titulo: </strong>({{ datosAcademicos.titulo }})
+                        <br>
+                        <strong>Fecha Inicio: </strong>({{ datosAcademicos.fechaInicio }})
+                        <br>
+                        <strong>Fecha Fin: </strong>({{ datosAcademicos.fechaFin }})
+                    </li>
+                </p>
+                <a class="button" href="/datosEs"> Editar Datos</a>
+
                 <div class="line"></div>
                 <h2>Experiencia</h2>
+                <p>
+                <li *ngFor="let datosEmpresa of datosEx.datosEmpresa">
+                    <strong>Nombre Empresa: </strong>{{ datosEmpresa.nombreEmpresa }} 
+                    <br>
+                    <strong>puesto: </strong>({{ datosEmpresa.puesto }})
+                    <br>
+                    <strong>Fecha Inicio: </strong>({{ datosEmpresa.fechaInicio }})
+                    <br>
+                    <strong>Fecha Fin: </strong>Fecha Fin: ({{ datosEmpresa.fechaFin }})
+                </li>
+            </p>
+            <a class="button" href="/datosEx"> Editar Datos</a>
+
+
             </div>
         </div>
     </form>

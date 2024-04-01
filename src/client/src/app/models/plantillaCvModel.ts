@@ -12,13 +12,41 @@ export interface DatosCvModel {
   nombreCiudad: string;
 }
 
-// perfil-cv.model.ts
+// // perfil-cv.model.ts
+// export interface PerfilCvModel {
+//   _id: string;
+//   puesto: string;
+//   lenguajeProgramacion: string[];
+//   Sos: string[];
+//   yearsExperiencia: number;
+//   idiomas: string;
+//   certificaciones: string[];
+// }
+
 export interface PerfilCvModel {
-  _id: string;
-  puesto: string;
+  _id?: string;
+  username:String;
+  puestoPostulante: string;
   lenguajeProgramacion: string[];
-  Sos: string[];
+  tecnologias: string[];
   yearsExperiencia: number;
-  idiomas: string;
-  certificaciones: string[];
+  idiomas: { nombreIdioma: string, nivel: string }[];
+  certificaciones: { nombre: string, archivo?: File }[];
+  isDone: boolean; 
+  n?: number;
+}
+
+export interface DatosExCVModel {
+  _id?: string;
+  username:String;
+  datosEmpresa: { nombreEmpresa: string, puesto: string, fechaInicio: String, fechaFin:String }[];
+  isDone: boolean;
+  n?: number;
+}
+export interface DatosEsCvModel {
+  _id?: string;
+  username:String;
+  datosAcademicos: { nombreUniv: string, titulo: string, fechaInicio: String, fechaFin:String }[];
+  isDone: boolean;
+  n?: number;
 }
